@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Electric Bill Calculator</title>
+    <style>
+        .footer_style
+        {
+          height: 50px;
+          padding: 15px;
+          
+        }
+        .footer_style p
+        {
+          margin-bottom: 0px;
+        }
+      </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand" href="#">Electric Bill Calculator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand ml-5 pl-5" href="#">JBVNL</a>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto text-capitalize" style="padding-right: 100px;">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">WBSEDCL
+                    (2017-2018, 18-19, 19-20, 20-21)</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    SBPDCL
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../templates/SBPDCL_2017.html">(2017-2018)</a>
+                    <a class="dropdown-item" href="../templates/SBPDCL_2018.html">(2018-2019) & (2019-2020)</a>
+                    <a class="dropdown-item" href="../templates/SBPDCL_2020.html">(2020-2021)</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../templates/JBVNL.html">JBVNL</a>
+                </li>
+              </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <table class="table border border-dark table-bordered ">
+            <thead>
+                <tr class="table-primary">
+                    <th scope="col">Year</th>
+                    <th scope="col">Unit</th>
+                    <th scope="col">Rate</th>
+                    <th scope="col">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2018 - 2019</td>
+                    <td><input type="number" id="u1" value="0" onchange="Generate(this.value)"></td>
+                    <td><input type="number" id="r1" style="font-weight: bold;" value="5.50" onchange="Generate(this.value)"></td>
+                    <td><input type="number" id="amt1" value="0"></td>
+                </tr>
+                <tr>
+                    <td>2019 - 2020</td>
+                    <td><input type="number" id="u2" value="0" onchange="Generate(this.value)"></td>
+                    <td><input type="number" id="r2" style="font-weight: bold;" value="6.25" onchange="Generate(this.value)"></td>
+                    <td><input type="number" id="amt2" value="0"></td>
+                </tr>
+                <tr>
+                    <td>2020 - 2021</td>
+                    <td><input type="number" id="u3" value="0" onchange="Generate(this.value)"></td>
+                    <td><input type="number" id="r3" style="font-weight: bold;" value="6.25" onchange="Generate(this.value)"></td>
+                    <td><input type="number" id="amt3" value="0"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-center"><button class="btn btn-primary mb-2"
+                            onclick="Generate()">Generate</button>
+                        <input type="button" class="btn btn-primary mb-2" value="Refresh" onclick="window.location.reload();">
+                    </td>
+                            
+                    <td class="text-center" style="font-size: 29px;">Total Amount:</td>
+                    <td>
+                        <h2 id="total">0</h2>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-5">
+        <div class="footer_style bg-light text-black text-center container-fluid">
+          <p>Copyright &copy;, design by Shrill Soren</p>
+        </div>
+      </div>
+    <!-- Optional JavaScript -->
+    <script src="../js/JBVNL.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../Papa Ka Software/js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
